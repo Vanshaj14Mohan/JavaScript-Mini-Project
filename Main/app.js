@@ -23,6 +23,6 @@ for(delBtn of delBtns ){
         // console.log("Element deleted"); just for checking
         let par = this.parentElement;
         console.log(par);
-        par.remove(); //would work on existing elements, and not on newly created elements.
+        par.remove(); //would work only on existing elements, and not on newly created elements.
     });
 };
