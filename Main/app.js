@@ -29,7 +29,12 @@ btn.addEventListener("click", function(){
 
 //So adding event listeners on ul, using event bubbling here
 ul.addEventListener("click", function(event){
-    console.log(event.target);//to target specific element
-    console.dir(event.target);//to target specific element
-    console.log("Button Clicked");
+    //console.log(event.target);//to target specific element
+    // console.dir(event.target.nodeName);//to target specific element
+    // console.log("Button Clicked");
+    if(event,EventTarget.nodeName = "BUTTON"){
+        let listItem = event.target.parentElement;
+        console.log(listItem);
+        console.log("Delete");
+    }
 });
