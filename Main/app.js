@@ -17,12 +17,19 @@ btn.addEventListener("click", function(){
 });
 
 //Now to delete the item
-let delBtns = document.querySelectorAll(".delete");
-for(delBtn of delBtns ){
-    delBtn.addEventListener("click", function(){
-        // console.log("Element deleted"); just for checking
-        let par = this.parentElement;
-        console.log(par);
-        par.remove(); //would work only on existing elements, and not on newly created elements.
-    });
-};
+// let delBtns = document.querySelectorAll(".delete");
+// for(delBtn of delBtns ){
+//     delBtn.addEventListener("click", function(){
+//         // console.log("Element deleted"); just for checking
+//         let par = this.parentElement;
+//         console.log(par);
+//         par.remove(); //would work only on existing elements, and not on newly created elements. so we will use event delegation
+//     });
+// };
+
+//So adding event listeners on ul, using event bubbling here
+ul.addEventListener("click", function(event){
+    console.log(event.target);//to target specific element
+    console.dir(event.target);//to target specific element
+    console.log("Button Clicked");
+});
