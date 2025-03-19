@@ -5,9 +5,6 @@ let inp = document.querySelector("input");
 btn.addEventListener("click", function(){
     let item = document.createElement("li"); //A new item created for li
     item.innerText = inp.value;
-    // console.log("Button clicked");
-    // console.log(inp.value);
-
     let delBtn = document.createElement("button");
     delBtn.innerText = "Delete";
     delBtn.classList.add("delete");
