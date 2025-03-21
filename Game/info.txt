@@ -1,1 +1,2 @@
-Simon say game Introduction.
+A mini project based Simon say game 
+Introduction.
