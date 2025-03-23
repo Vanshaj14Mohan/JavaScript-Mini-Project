@@ -51,7 +51,7 @@ function btnPress(){ //function to handle button press
     userFlash(btn);
 }
 
-let allBtns = document.querySelectorAll(".btns");
+let allBtns = document.querySelectorAll(".btns"); //getting all buttons
 
 for(btn of allBtns){
   btn.addEventListener("click", btnPress);
