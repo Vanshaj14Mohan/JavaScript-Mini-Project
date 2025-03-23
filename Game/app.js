@@ -17,14 +17,14 @@ document.addEventListener("keypress", function(){
     }
 });
 
-function gameFlash(btn){
+function gameFlash(btn){ //Creating flash done by the game
     btn.classList.add("flash");
     setTimeout(function(){ //after one second remove that flash
         btn.classList.remove("flash");
     }, 250);
 }
 
-function userFlash(btn){
+function userFlash(btn){ //function to check for user
     btn.classList.add("userFlash");
     setTimeout(function(){ //after one second remove that flash
         btn.classList.remove("userFlash");
@@ -44,7 +44,7 @@ function levelUp(){
     gameFlash(randBtn); //random button choose
 }
 
-function btnPress(){
+function btnPress(){ //function to handle button press
     // console.log("Button was pressed");
     console.log(this);
     let btn = this;
