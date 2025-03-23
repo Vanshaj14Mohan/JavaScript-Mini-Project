@@ -35,19 +35,18 @@ function userFlash(btn){
 function levelUp(){
     level++;
     h2.innerText = `Level ${level}`;
-
     let randIdx = Math.floor(Math.random() * 3);
     console.log("Random index", randIdx);
     let randCol = btns[randIdx]; //choosing random color
     console.log("Random Color", randCol);
     let randBtn = document.querySelector(`.${randCol}`);
     console.log("Random button", randBtn);
-    gameFlash(randBtn); //rabdom button choose
+    gameFlash(randBtn); //random button choose
 }
 
 function btnPress(){
     // console.log("Button was pressed");
-    // console.log(this);
+    console.log(this);
     let btn = this;
     userFlash(btn);
 }
