@@ -68,7 +68,6 @@ function btnPress(){ //function to handle button press
     userColor = btn.getAttribute("id");
     // console.log(userColor);
     userSeq.push(userColor);
-
     checkSeq(userSeq.length-1);  
 }
 
