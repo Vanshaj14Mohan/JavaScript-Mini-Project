@@ -33,6 +33,7 @@ function userFlash(btn){ //function to check for user
 
 
 function levelUp(){
+    userSeq = [];
     level++;
     h2.innerText = `Level ${level}`;
     let randIdx = Math.floor(Math.random() * 3);
@@ -52,7 +53,7 @@ function checkSeq(idx){ //to check our current level.
     if(userSeq[idx] === gameSeq[idx]){
         //console.log("Same Value");
         if(userSeq.length == gameSeq.length){
-            levelUp();
+            setTimeout(levelUp, 1000);
         }
     }
     else{
