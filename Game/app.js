@@ -46,10 +46,9 @@ function levelUp(){
     gameFlash(randBtn); //random button choose
 }
 
-function checkSeq(){ //to check our current level.
+function checkSeq(idx){ //to check our current level.
     // console.log("Current Level:", level);   
-    let idx = level - 1;
-
+    // let idx = level - 1;
     if(userSeq[idx] === gameSeq[idx]){
         //console.log("Same Value");
         if(userSeq.length == gameSeq.length){
@@ -70,7 +69,7 @@ function btnPress(){ //function to handle button press
     // console.log(userColor);
     userSeq.push(userColor);
 
-    checkSeq();  
+    checkSeq(userSeq.length-1);  
 }
 
 let allBtns = document.querySelectorAll(".btns"); //getting all buttons
