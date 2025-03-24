@@ -36,12 +36,29 @@ function levelUp(){
     level++;
     h2.innerText = `Level ${level}`;
     let randIdx = Math.floor(Math.random() * 3);
-    console.log("Random index", randIdx);
+    // console.log("Random index", randIdx);
     let randCol = btns[randIdx]; //choosing random color
-    console.log("Random Color", randCol);
+    // console.log("Random Color", randCol);
     let randBtn = document.querySelector(`.${randCol}`);
-    console.log("Random button", randBtn);
+    // console.log("Random button", randBtn);
+    gameSeq.push(randCol);
+    console.log(gameSeq);
     gameFlash(randBtn); //random button choose
+}
+
+function checkSeq(){ //to check our current level.
+    // console.log("Current Level:", level);   
+    let idx = level - 1;
+
+    if(userSeq[idx] === gameSeq[idx]){
+        //console.log("Same Value");
+        if(userSeq.length == gameSeq.length){
+            levelUp();
+        }
+    }
+    else{
+        h2.innerText = `Game Over! Press any key to start`;
+    }
 }
 
 function btnPress(){ //function to handle button press
@@ -49,6 +66,11 @@ function btnPress(){ //function to handle button press
     console.log(this);
     let btn = this;
     userFlash(btn);
+    userColor = btn.getAttribute("id");
+    // console.log(userColor);
+    userSeq.push(userColor);
+
+    checkSeq();  
 }
 
 let allBtns = document.querySelectorAll(".btns"); //getting all buttons
