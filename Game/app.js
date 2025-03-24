@@ -3,7 +3,7 @@ let userSeq = [];
 
 let btns = ["red", "yellow", "green", "purple"];
 
-let started = false; // tells if the game started or not
+let started = false; //tells if the game started or not
 let level = 0;
 
 let h2 = document.querySelector("h2");
