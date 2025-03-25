@@ -58,12 +58,14 @@ function checkSeq(idx){ //to check our current level.
     }
     else{
         h2.innerText = `Game Over! Press any key to start`;
+        reset();
     }
+
 }
 
 function btnPress(){ //function to handle button press
     // console.log("Button was pressed");
-    console.log(this);
+    // console.log(this);
     let btn = this;
     userFlash(btn);
     userColor = btn.getAttribute("id");
@@ -76,4 +78,12 @@ let allBtns = document.querySelectorAll(".btns"); //getting all buttons
 
 for(btn of allBtns){
   btn.addEventListener("click", btnPress);
+}
+
+//Function to restart the game
+function reset(){
+    started = false;
+    gameSeq = [];
+    userSeq = [];
+    level = 0;
 }
